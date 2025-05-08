@@ -1,6 +1,6 @@
-Feature: Registration
+Feature: Registration & Place an order
 
-Scenario: user register a new account
+Scenario: user register a new account and place an order
 
 Given user access homepage and click register
 Then user navigate to homepage
