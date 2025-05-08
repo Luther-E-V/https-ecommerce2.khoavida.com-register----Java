@@ -16,15 +16,36 @@ public class Step_definition {
 	Register_page register = new Register_page();
 	Cart_page cart = new Cart_page();
 	Personal_infor_prompt prompt = new Personal_infor_prompt();
-	@Given("user access homepage and click register")
+	
+	@Given("user access homepage, click register")
 	public void user_access_homepage() {
 		Random random = new Random();
 		int random_int = random.nextInt(0,101);
 		try {
-	    	Thread.sleep(2000);
-	    	page.navigate("https://ecommerce2.khoavida.com/register");
+	    		Thread.sleep(2000);
+	    		page.navigate("https://ecommerce2.khoavida.com/register");
 			page.locator(home.register_top_xpath).click();
-			String username = "124" + random_int + "512";
+		
+	    	}
+	    	catch(InterruptedException e) {}
+		
+	}
+
+	@Then("user navigate to Register page")
+	public void user_navigate_to_homepage() {
+	    	try {
+	    		Thread.sleep(2000);
+	    		System.out.println("OBSERVE");
+	    	}
+	    	catch(InterruptedException e) {}		
+	}
+	@When("user fill out infor and click register")
+	public void user_fill_out_infor_and_click_register() {
+	    Random random = new Random();
+	    int random_int = random.nextInt(0,101);
+	    	try {
+	    		Thread.sleep(2000);
+	   		String username = "124" + random_int + "512";
 			String password = "123321123";
 			String email = "sdas" + random_int + "da@gmail.com";
 			String confirm_password = "123321123";
@@ -35,20 +56,16 @@ public class Step_definition {
 			Thread.sleep(2000);
 			register.user_infor_retrieve();
 			page.locator(register.register_button_xpath).click();
-	    }
-	    catch(InterruptedException e) {}
-		
+	    	}
+	   	 catch(InterruptedException e) {}		
 	}
-
-	@Then("user navigate to homepage")
-	public void user_navigate_to_homepage() {
-	    try {
-	    	Thread.sleep(2000);
-	    	System.out.println("OBSERVE");
-	    }
-	    catch(InterruptedException e) {}		
+	@Then("user get directed to Homepage")
+	public void user_get_directed_to_homepage(){
+		try {
+		Thread.sleep(2000);
+		System.out.println("OBSERVE");
+	   	} catch(InterruptedException e) {}
 	}
-	
 	@When("user sroll down and add to cart phone and headphone")
 	public void user_sroll_down_and_add_to_cart_phone_and_headphone() {
 		try {
