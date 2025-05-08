@@ -3,7 +3,9 @@ Feature: Registration & Place an order
 Scenario: user register a new account and place an order
 
 Given user access homepage and click register
-Then user navigate to homepage
+Then user navigate to Register page
+When user fill out infor and click register 
+Then user get directed to Homepage
 When user sroll down and add to cart phone and headphone
 When user click cart logo on the right top of the page
 Then user click proceed to checkout
