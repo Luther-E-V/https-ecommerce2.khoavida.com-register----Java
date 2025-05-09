@@ -1,14 +1,14 @@
-package step_definition;
+package com.khoavida.step_definition;
+import com.khoavida.page.*;
 import com.microsoft.playwright.*;
 import java.util.Random;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import step_setup.*;
 
 public class Step_definition {
 	
-	private Page page = step_setup.Playwright_initiator.page;
+	private Page page = com.khoavida.page.Playwright_initiator.page;
 	Playwright_initiator initiator = new Playwright_initiator();
 	Home_page home = new Home_page();
 	Login_page login = new Login_page();

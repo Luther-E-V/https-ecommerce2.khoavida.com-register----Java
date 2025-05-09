@@ -1,4 +1,4 @@
-package step_setup;
+package com.khoavida.page;
 
 public class Home_page {
 	public final String home_top_xpath = "//a[contains(@class,'MuiButtonBase-root') and text()='Home']";

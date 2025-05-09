@@ -1,9 +1,9 @@
-package step_setup;
-import step_setup.Playwright_initiator;
+package com.khoavida.page;
+import com.khoavida.page.Playwright_initiator;
 import com.microsoft.playwright.Page;
 
 public class Shop_page {
-	private Page page = step_setup.Playwright_initiator.page;
+	private Page page = com.khoavida.page.Playwright_initiator.page;
 	//TOP BASIC BUTTON
 	public final String home_top_xpath = "//a[contains(@class,'MuiButtonBase-root') and text()='Home']";
 	public final String shop_top_xpath = "//a[contains(@class,'MuiButtonBase-root') and text()='Shop']";

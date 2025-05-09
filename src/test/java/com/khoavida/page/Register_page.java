@@ -1,4 +1,4 @@
-package step_setup;
+package com.khoavida.page;
 
 import java.util.Scanner;
 
@@ -12,7 +12,7 @@ public class Register_page {
 	public final String register_button_xpath = "//button[text()='Register']";
 	public  String username,password,email,confirm_password;
 	
-	private Page page = step_setup.Playwright_initiator.page;
+	private Page page = com.khoavida.page.Playwright_initiator.page;
 	
 	
 	public void user_input(String username,String password,String email,String confirm_password) {
