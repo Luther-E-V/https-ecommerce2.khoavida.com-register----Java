@@ -1,10 +1,9 @@
 package com.khoavida.page;
-import com.khoavida.page.Playwright_initiator;
 import com.microsoft.playwright.Page;
 
 public class Personal_infor_prompt {
 	
-	private Page page = com.khoavida.page.Playwright_initiator.page;
+	private Page page = com.khoavida.config.PlaywrightConfig.getPage();
 	//FIELDS
 	public final String fullname_field_xpath = "//label[text()='Full Name']";
 	public final String email_address_xpath = "//label[text()='Email Address']";

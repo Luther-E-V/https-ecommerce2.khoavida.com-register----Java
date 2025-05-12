@@ -1,5 +1,4 @@
 package com.khoavida.page;
-import com.khoavida.page.Playwright_initiator;
 import com.microsoft.playwright.Page;
 
 import java.util.Scanner;
@@ -13,8 +12,8 @@ public class Login_page {
 	public final String login_top_xpath = "//a[contains(@class,'MuiButtonBase-root') and text()='Login']";
 	public final String cart_top_xpath = "//span[contains(@class,'MuiBadge-standard')]";
 	//INPUT FIELD
-	public final String email_xpath = "//label[text()='Email']";
-	public final String password_xpath = "//label[text()='Password']";
+	public final String email_xpath = "//div[./label[text()='Email']]//input";
+	public final String password_xpath = "//div[./label[text()='Password']]//input";
 	//BUTTON & LINK TEXT
 	public final String reveal_password_xpath = "//div[contains(@class,'MuiInputBase-root')][./div]//button";
 	public final String login_button_xpath = "//button[text()='Login']";

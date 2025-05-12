@@ -1,9 +1,9 @@
 package com.khoavida.page;
-import com.khoavida.page.Playwright_initiator;
+import com.khoavida.config.*;
 import com.microsoft.playwright.Page;
 
 public class Shop_page {
-	private Page page = com.khoavida.page.Playwright_initiator.page;
+	private Page page = com.khoavida.config.PlaywrightConfig.getPage();
 	//TOP BASIC BUTTON
 	public final String home_top_xpath = "//a[contains(@class,'MuiButtonBase-root') and text()='Home']";
 	public final String shop_top_xpath = "//a[contains(@class,'MuiButtonBase-root') and text()='Shop']";
