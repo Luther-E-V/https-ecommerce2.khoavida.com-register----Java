@@ -4,7 +4,6 @@ com\khoavida\page\Cart_page.class
 com\khoavida\runner\Testrunner.class
 com\khoavida\step_definition\Step_definition.class
 com\khoavida\config\PlaywrightConfig.class
-com\khoavida\util\PlaywrightFactory.class
 com\khoavida\page\Home_page.class
 com\khoavida\page\Shop_page.class
 com\khoavida\hook\Testhook.class
