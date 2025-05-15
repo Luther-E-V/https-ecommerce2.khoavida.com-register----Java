@@ -11,7 +11,7 @@ public class PlaywrightConfig {
 	private static Browser browser;
 	private static Page page;
 	
-	//
+	//BRWOSER ATTRIBUTE
 	public static final boolean headless = false;
 	public static final int timeout = 3000;
 	
@@ -26,7 +26,7 @@ public class PlaywrightConfig {
 	public static Browser getBrowser() {
 		if(browser == null) {
 			browser = PlaywrightConfig.getPlaywright().chromium().launch(new BrowserType.LaunchOptions().setHeadless(headless).setTimeout(timeout));
-		} 
+		}
 		return browser;
 	}
 	public static Page getPage() {

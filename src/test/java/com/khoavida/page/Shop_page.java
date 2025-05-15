@@ -10,6 +10,7 @@ public class Shop_page {
 	public final String register_top_xpath = "//a[contains(@class,'MuiButton-text') and text()='Register']";
 	public final String login_top_xpath = "//a[contains(@class,'MuiButtonBase-root') and text()='Login']";
 	public final String cart_top_xpath = "//span[contains(@class,'MuiBadge-standard')]";
+	public final String logout_top_xpath = "//button[contains(@class,'MuiButtonBase-root') and text()='Logout']";
 	
 	//ITEMS' BUTTON
 	public static final String camera_canon_eos_r15_add_to_cart_xpath = "//div[contains(@class,'MuiPaper-elevation')][.//div[contains(@class,'MuiTypography') and text()='Canon EOS R5']]//button[text()='Add to Cart']";

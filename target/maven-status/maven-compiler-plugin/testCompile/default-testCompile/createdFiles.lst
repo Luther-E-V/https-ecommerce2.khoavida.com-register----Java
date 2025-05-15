@@ -1,5 +1,6 @@
 com\khoavida\page\Login_page.class
 com\khoavida\page\Register_page.class
+com\khoavida\util\Utensil.class
 com\khoavida\page\Cart_page.class
 com\khoavida\runner\Testrunner.class
 com\khoavida\step_definition\Step_definition.class
