@@ -19,5 +19,8 @@ public class Login_page {
 	public final String login_button_xpath = "//button[text()='Login']";
 	public final String forgot_password_xpath = "//a[text()='Forgot password?']";
 	public final String register_here_xpath = "//a[text()='Register here']";
-	
+	//INVALID NOTI
+	public final String invalid_noti_xpath = "//p[text()='Invalid credentials']";
+	public final String empty_email_noti_xpath = "//p[text()='Please include a valid email']";
+	public final String[] invalid_case = {"Invalid credentials","Please include a valid email"}; 
 }
