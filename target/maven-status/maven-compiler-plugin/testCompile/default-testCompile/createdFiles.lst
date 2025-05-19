@@ -1,12 +1,16 @@
 com\khoavida\page\Login_page.class
 com\khoavida\page\Register_page.class
-com\khoavida\util\Utensil.class
 com\khoavida\page\Cart_page.class
 com\khoavida\runner\Testrunner.class
 com\khoavida\step_definition\Step_definition.class
+com\khoavida\step_definition\Step_definition_register.class
+com\khoavida\step_definition\Step_definition_login.class
 com\khoavida\config\PlaywrightConfig.class
 com\khoavida\page\Home_page.class
 com\khoavida\page\Shop_page.class
 com\khoavida\hook\Testhook.class
 com\khoavida\util\TestContext.class
+com\khoavida\util\Utensil_login.class
 com\khoavida\page\Personal_infor_prompt.class
+com\khoavida\step_definition\Step_definition_login_with_multiple_account.class
+com\khoavida\util\Utensil_register.class

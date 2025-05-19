@@ -6,7 +6,7 @@ When user click login link
 Then user at login page
 When user enter "<accountname>" and "<password>"
 And user click login button
-Then user should be navigate to homepage
+Then user should be navigate to homepage after click login button
 
 Examples:
 |accountname				|		password		|	

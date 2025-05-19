@@ -10,7 +10,7 @@ Given user at login page
 Scenario: user sucessfully login with valid account
 When user enter valid account and password
 And user click login button
-Then user should be navigate to homepage
+Then user should be navigate to homepage after click login button
 
 @login_with_invalid_account
 Scenario: user fail to login with invalid account

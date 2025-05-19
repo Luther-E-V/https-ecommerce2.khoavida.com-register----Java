@@ -1,7 +1,6 @@
 package com.khoavida.hook;
 
 import com.khoavida.config.*;
-import com.microsoft.playwright.Page;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.AfterAll;
 

@@ -1,25 +1,18 @@
 package com.khoavida.util;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.khoavida.config.PlaywrightConfig;
-import com.microsoft.playwright.ElementHandle;
-import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.khoavida.page.*;
 
 
-public class Utensil {
+public class Utensil_login {
 	private Page page = PlaywrightConfig.getPage();
+	Register_page register = new Register_page();
 	
-	public void check_accoutInvalidity() {
-		
-	}
-	
-	public void check_Navigation(String expected_String, String actual_String, String expected_page) {
-		if (actual_String.equals(expected_String)) {
-	    	System.out.println("User is navigated to expected page " + expected_page);
+	public void check_Navigation(String expected_title, String actual_title_xpath) {
+		String actual_title = page.locator(actual_title_xpath).innerText();
+		if (actual_title.equals(expected_title)) {
+	    	System.out.println("User is navigated to expected " + expected_title + " page");
 	    } else {
 	    	System.out.println("User is not navigated to expected page");
 	    }
@@ -54,15 +47,14 @@ public class Utensil {
 		boolean invalid_account_noti_visible = page.locator(login.invalid_noti_xpath).isVisible();
 		boolean improper_email_format_noti_visible = page.locator(login.email_xpath).isVisible();
 		boolean homepage_title_visible = page.locator(home.title).isVisible();	
-		
-		if (invalid_account_noti_visible) {
-			System.out.println("Invalid account.\nSystem notifies: " + page.locator(login.invalid_noti_xpath).innerText());
-		} else if (improper_email_format_noti_visible) {
-			System.out.println("Imporper email format.\nSytem notifies: " + page.locator(login.empty_email_noti_xpath).innerText());
-		} else if (homepage_title_visible) {
+		if (homepage_title_visible) {
 			System.out.println("Valid account.\nUser gets redirected to Home page");
 			Thread.sleep(2000);
 			page.locator(home.logout_top_xpath);
+		} else if (invalid_account_noti_visible){
+			System.out.println("Invalid account\nSystem notifies: " + page.locator(login.invalid_noti_xpath).innerText());
+		} else if (improper_email_format_noti_visible) {
+			System.out.println("Improper email format\nSystem notifies: " + page.locator(login.empty_email_noti_xpath).innerText());
 		}
 	}
 	public void Logout() {
@@ -71,8 +63,6 @@ public class Utensil {
 			page.click(home.logout_top_xpath);
 			
 		}
-		
-		
-		
 	}
+	
 }

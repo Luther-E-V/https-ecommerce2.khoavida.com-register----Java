@@ -11,11 +11,11 @@ public class Register_page {
 	public final String confirm_password_field_xpath = "(//input[contains(@class,'MuiOutlinedInput-input')])[4]";
 	public final String register_button_xpath = "//button[text()='Register']";
 	public  String username,password,email,confirm_password;
-	
+	public final String title = "//h4[text()='Register']";
 	private Page page = com.khoavida.config.PlaywrightConfig.getPage();
 	
 	
-	public void user_input(String username,String password,String email,String confirm_password) {
+	public void user_input(String username,String email, String password, String confirm_password) {
 		this.username = username;
 		this.password = password;
 		this.email = email;
@@ -27,6 +27,7 @@ public class Register_page {
 		page.fill(email_field_xpath, this.email);
 		page.fill(password_field_xpath, this.password);
 		page.fill(confirm_password_field_xpath, this.confirm_password);
+		
 		boolean Check_confirm_password = this.confirm_password.equals(this.password);
 		for(int time = 0; time <= 5; time++) {
 			if (!Check_confirm_password) {
